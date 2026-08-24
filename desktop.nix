@@ -15,23 +15,18 @@
   virtualisation.waydroid.package = pkgs.waydroid-nftables;
 
   # Input remapper
-  services.input-remapper = {
-    enable = true;
-    enableUdevRules = true;
-  };
+  services.input-remapper.enable = true;
   
   # Packages list
   environment.systemPackages = with pkgs; [
-     syncthing
      fresh-editor
      kitty
      git
      python3
      steam
-     vscodium
-     rustup
      _7zz
-     github-desktop
      input-remapper
+     gh
+     rustup
   ];
 }
