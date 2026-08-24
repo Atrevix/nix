@@ -14,8 +14,13 @@
   # Newer kernel versions may need
   virtualisation.waydroid.package = pkgs.waydroid-nftables;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  # Input remapper
+  services.input-remapper = {
+    enable = true;
+    enableUdevRules = true;
+  };
+  
+  # Packages list
   environment.systemPackages = with pkgs; [
      syncthing
      fresh-editor
@@ -27,5 +32,6 @@
      rustup
      _7zz
      github-desktop
+     input-remapper
   ];
 }
