@@ -28,5 +28,6 @@
      input-remapper
      gh
      rustup
+     dioxus-cli
   ];
 }
