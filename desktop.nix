@@ -8,7 +8,11 @@
   programs.dms-shell.enable = true;
   programs.dsearch.enable = true;
   programs.gamemode.enable = true;
-
+  services.dbus.enable = true;
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
+  };
   # Waydroid config
   virtualisation.waydroid.enable = true;
   # Newer kernel versions may need
