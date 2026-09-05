@@ -1,5 +1,8 @@
 { config, pkgs, ...}:
 {
+    
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Allow flatpak apps
   services.flatpak.enable = true;
 
@@ -33,5 +36,12 @@
      gh
      rustup
      dioxus-cli
+     xwayland-satellite
+     ibm-plex
+     lutris
+     zed-editor
+     
+     gcc
+     pkg-config
   ];
 }
